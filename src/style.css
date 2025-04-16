@@ -1,0 +1,179 @@
+:root {
+  font-family: 'Calibri', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  padding: 0; /* Ensure no padding in body */
+  min-width: 320px;
+  min-height: 100vh;
+  max-height: 720px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  color: white;
+}
+
+.h0 {
+  font-size: 8em;
+  line-height: 1.1;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin: 0; /* Remove any default margins on h1 */
+  padding: 0; /* Remove any default padding on h1 */
+  top: 0;
+  width: 100%;
+}
+
+
+h1 {
+  font-size: 6em;
+  line-height: 1.1;
+  display: flex;
+  justify-content: center;
+  margin: 0; /* Remove any default margins on h1 */
+  padding: 0; /* Remove any default padding on h1 */
+}
+
+div.blink {
+  animation: blinkAnimation 1.5s infinite; /* 1 second duration for one full blink cycle */
+  font-weight: bolder;
+  font-size: 6em;
+  position: relative;
+  top: 2.7em;
+}
+
+@keyframes blinkAnimation {
+  0%, 90% {
+    opacity: 1; /* Visible at the start and end */
+  }
+  91%, 100% {
+    opacity: 0; /* Invisible at the halfway point */
+  }
+}
+
+.bottom {
+  font-size: 4em;
+  line-height: 1.1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0; /* Remove any default margins on h1 */
+  padding: 0; /* Remove any default padding on h1 */
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+}
+
+.online {
+  color: lawngreen;
+  font-weight: bold;
+}
+
+.offline {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+.time-container {
+  position: absolute;
+  width: 100%;
+  top: 3rem; /* Aligns the container at the very top of the screen */
+  left: 0;
+  margin: 0; /* Ensure no margins are adding space */
+  padding: 0; /* Remove padding for no extra space */
+  background-color: #fff;
+  z-index: 9999;
+}
+
+span {
+  font-size: 70px;
+  font-weight: bolder;
+  margin-top: 1.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: 'Roboto', sans-serif; /* Example font */
+}
+
+#app {
+  max-width: 1550px;
+  max-height: 710px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.neon-text {
+  font-weight: bolder;
+  font-size: 8em;
+  position: relative;
+  top: 2em;
+  color: #fff;
+  text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  animation: glow 1.5s infinite alternate;
+
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px darkorange, 0 0 10px darkorange, 0 0 20px darkorange, 0 0 40px darkorange, 0 0 80px darkorange;
+  }
+  100% {
+    text-shadow: 0 0 10px orangered, 0 0 20px orangered, 0 0 40px orangered, 0 0 80px orangered, 0 0 160px orangered;
+  }
+}
